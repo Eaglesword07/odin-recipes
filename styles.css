@@ -30,7 +30,7 @@ header {
 
 h1 {
     font-family: cursive;
-    font-size: 40px;
+    font-size: 3.34vw;
     text-align: center;
     color: rgb(3, 65, 40);
 }
@@ -59,6 +59,10 @@ a img {
     align-items: center;
     justify-content: space-around;
     text-decoration: none;
+}
+
+.headerList a {
+    padding: 0 5px;
 }
 
 .container2 {
@@ -99,19 +103,104 @@ footer {
 }
 
 
+/* styling for the recipes pages on same stylesheet */
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+}
+
+#logo:hover {
+    text-decoration: none;
+}
+
+#middleSection {
+    margin: 90px 60px 50px;
+}
+
+.recipeContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px 0;
+}
+
+.recipeImages {
+    max-width: 800px;
+}
+
+.recipedesc {
+    width: 70%;
+    margin: 0 0 15px;
+}
+
+.ingredients {
+    flex: 0 1 344px;
+    background-color: aliceblue;
+    padding: 10px 10px;
+    margin-left: 15px;
+}
+
+
 @media only screen and (max-width: 700px) {
 
 
-    header:hover>div {
+    header {
         display: grid;
+        align-items: center;
     }
 
     .headerList {
-        display: none;
-        grid-auto-flow: column;
-        justify-content: space-around;
+        display: grid;
+        grid-auto-flow: row;
         text-decoration: none;
-        transition: ease-in-out;
-        transition-duration: 2s;
+    }
+
+    .container-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* styling for the recipes pages for smaller screens on same stylesheet */
+
+    #header {
+        position: absolute;
+        z-index: 4;
+    }
+
+    #middleSection {
+        margin: 0 0 30px;
+    }
+
+    .recipeContainer {
+        display: block;
+        padding: 0;
+    }
+
+    .recipeImages {
+        position: relative;
+        width: 100%;
+    }
+
+    .recipedesc {
+        width: 100%;
+        margin: 15px 0;
+        padding: 0 20px;
+    }
+
+    .ingredients {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .steps {
+        padding: 0 40px;
     }
 }
